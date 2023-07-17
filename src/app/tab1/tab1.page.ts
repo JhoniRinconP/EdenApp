@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FirestoreService } from '../data/firestore.service';
 
 @Component({
   selector: 'app-tab1',
@@ -7,6 +8,12 @@ import { Component } from '@angular/core';
 })
 export class Tab1Page {
 
-  constructor() {}
+  constructor(public x: FirestoreService ) {
+
+    this.x.traerDatos().subscribe(res=>{
+      console.log('RES=>', res)
+    })
+
+  }
 
 }
