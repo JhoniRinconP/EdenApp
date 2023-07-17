@@ -1,0 +1,7 @@
+{
+  "name": "eden",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
