@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { FirestoreService } from '../data/firestore.service';
+import { FirestoreService } from '../data/fireservices/firestore.service';
+
 
 @Component({
   selector: 'app-tab1',

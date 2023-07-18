@@ -1,0 +1,17 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar>
+    <ion-title class="ion-text-center">EDEN</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-searchbar showCancelButton="focus" color="tertiary" class="custom" placeholder="Buscar" ></ion-searchbar>
+
+  <section class="login"> 
+    <ion-button  [routerLink]="['/login']" size="large" color="tertiary">Iniciar Sesión
+      <ion-icon slot="start" name="person"></ion-icon>
+    </ion-button>
+  </section>
+
+</ion-content>
