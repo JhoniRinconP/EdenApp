@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { LoginGuard } from './data/guards/login.guard';
+import { PaginasGuard } from './data/guards/paginas.guard';
 
 const routes: Routes = [
   {
@@ -8,11 +10,11 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    loadChildren: () => import('./pages/home/home.module').then(m => m.HomePageModule)
+    loadChildren: () => import('./pages/home/home.module').then(m => m.HomePageModule)//,canActivate:[LoginGuard]
   },
   {
     path: 'login',
-    loadChildren: () => import('./pages/login/login.module').then(m => m.LoginPageModule)
+    loadChildren: () => import('./pages/login/login.module').then(m => m.LoginPageModule)//, canActivate:[PaginasGuard]
   },
   {
     path: '', // Ruta vacía, se establecerá como página principal
@@ -22,7 +24,11 @@ const routes: Routes = [
   {
     path: '**', // Página no encontrada, puedes manejarla como desees
     redirectTo: 'home',
+  },  {
+    path: 'search',
+    loadChildren: () => import('./components/search/search.module').then( m => m.SearchPageModule)
   }
+
 ];
 
 

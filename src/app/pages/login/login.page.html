@@ -13,41 +13,11 @@
               <ion-icon name="key-outline" class="iconsformulario"></ion-icon>
               <input type="password" formControlName="contrasena" placeholder="Contraseña" />
             </div>
-            <input type="submit" value="Iniciar" class="btn" />
-          </form>
-
-          <form autocomplete="off" class="sign-up-form">
-            <h2 class="title">Sign up</h2>
-            <div class="input-field">
-              <i class="fas fa-user"></i>
-              <input type="text" placeholder="Username" />
-            </div>
-            <div class="input-field">
-              <i class="fas fa-envelope"></i>
-              <input type="email" placeholder="Email" />
-            </div>
-            <div class="input-field">
-              <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" />
-            </div>
-            <input type="submit" class="btn" value="Sign up" />
-            <p class="social-text">Or Sign up with social platforms</p>
-            <div class="social-media">
-              <a href="#" class="social-icon">
-               <ion-icon name="logo-google"></ion-icon>
-              </a>
-              <a href="#" class="social-icon">
-                <ion-icon name="logo-google"></ion-icon>
-              </a>
-              <a href="#" class="social-icon">
-                <ion-icon name="logo-google"></ion-icon>
-              </a>
-              <a href="#" class="social-icon">
-                <ion-icon name="logo-google"></ion-icon>
-              </a>
+            <div class="contbotones">
+              <ion-button class="btnsacciones" [routerLink]="['/home']" shape="round"><ion-icon name="arrow-back-outline"></ion-icon> Regresar</ion-button>
+              <ion-button class="btnsacciones" type="submit" shape="round"> Iniciar</ion-button>
             </div>
           </form>
-
         </div>
       </div>
 
@@ -80,20 +50,3 @@
         </div>
       </div>
     </div>
-
-    <script src="app.js"></script>
-
-    <script>
-      const sign_in_btn = document.querySelector("#sign-in-btn");
-const sign_up_btn = document.querySelector("#sign-up-btn");
-const container = document.querySelector(".container");
-
-sign_up_btn.addEventListener("click", () => {
-  container.classList.add("sign-up-mode");
-});
-
-sign_in_btn.addEventListener("click", () => {
-  container.classList.remove("sign-up-mode");
-});
-    </script>
-

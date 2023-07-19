@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FirestoreService } from '../data/fireservices/firestore.service';
+import { ModalController } from '@ionic/angular';
+import { SearchPage } from '../components/search/search.page';
 
 
 @Component({
@@ -9,12 +11,21 @@ import { FirestoreService } from '../data/fireservices/firestore.service';
 })
 export class Tab1Page {
 
-  constructor(public x: FirestoreService ) {
+  constructor(public x: FirestoreService,
+    public modalController: ModalController) {
 
     this.x.traerDatos().subscribe(res=>{
       console.log('RES=>', res)
     })
 
+  }
+
+  async modalBusqueda(){
+    const modal = await this.modalController.create({
+      component: SearchPage,
+      cssClass: 'my-custom-class',
+    });
+    return await modal.present();
   }
 
 }

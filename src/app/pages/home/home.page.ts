@@ -18,6 +18,10 @@ export class HomePage implements OnInit {
   ngOnInit() {
   }
 
+  Cerrarsesion(){
+    this.authService.logoutUser()
+  }
+
 
 
 }
