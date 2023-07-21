@@ -24,11 +24,20 @@ const routes: Routes = [
   {
     path: '**', // Página no encontrada, puedes manejarla como desees
     redirectTo: 'home',
+  },
+  {
+    path: 'searchs',
+    loadChildren: () => import('./pages/search/search.module').then( m => m.SearchPageModule)
   },  {
-    path: 'search',
-    loadChildren: () => import('./components/search/search.module').then( m => m.SearchPageModule)
-  }
+    path: 'deceased',
+    loadChildren: () => import('./pages/deceased/deceased.module').then( m => m.DeceasedPageModule)
+  },
+  {
+    path: 'profile',
+    loadChildren: () => import('./pages/profile/profile.module').then( m => m.ProfilePageModule)
+  },
 
+  
 ];
 
 

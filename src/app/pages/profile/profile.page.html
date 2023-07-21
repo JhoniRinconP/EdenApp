@@ -1,0 +1,58 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>profile</ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content [fullscreen]="true">
+  <div class="profile-container">
+    <div class="silhouette"></div>
+    <img *ngIf="!editando" src="https://cdn.pixabay.com/photo/2023/06/19/16/02/beautiful-woman-8074997_1280.jpg" alt="Avatar" class="avatar">
+
+    <img *ngIf="editando" src="https://cdn.pixabay.com/photo/2023/06/19/16/02/beautiful-woman-8074997_1280.jpg" alt="Avatar" class="avatar editandoimg">
+  </div>
+
+  <div class="custom-file-input" *ngIf="editando">
+    <input type="file" accept="image/*" (change)="onFileSelected($event)">
+    <ion-icon name="camera-outline" class="camera-icon"></ion-icon>
+  </div>
+  
+  <div class="contInfpersonal">
+    <h3 class="nombre">Alison Danis</h3>
+    <h5 class="fecha">10 Febrero del 2000</h5>
+
+    <div class="contformulalrio">
+      <form autocomplete="off" [formGroup]="fromInfo" (ngSubmit)="actualizarInfo(fromInfo.value)">
+
+        <ion-input label="Nombres Y Apellidos" label-placement="floating" fill="outline" placeholder="Enter text" value="Alison Danis"  class="inptsformulario" formControlName="nombres"></ion-input>
+  
+        <ion-input label="Fecha De Nacimiento" label-placement="floating" fill="outline" placeholder="Enter text" type="date" value="2000-02-10"  class="inptsformulario" formControlName="fechaNacimiento"></ion-input>
+  
+        <ion-input label="Fecha De Muerte" label-placement="floating" fill="outline" placeholder="Enter text" type="date" value="2000-02-10"  class="inptsformulario" formControlName="fechaMuerte"></ion-input>
+
+        <ion-button shape="round" type="submit">Actualizar</ion-button>
+      </form>
+      
+    </div>
+  </div>
+
+    <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+      <ion-fab-button (click)="editarInformacion()">
+        <!-- <ion-icon name="chevron-up-circle"></ion-icon> (click)="editando =! editando" -->
+        <ion-icon name="pencil-outline"></ion-icon>
+      </ion-fab-button>
+      <!-- <ion-fab-list side="top">
+        <ion-fab-button>
+          <ion-icon name="document"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button>
+          <ion-icon name="color-palette"></ion-icon>
+        </ion-fab-button>
+        <ion-fab-button>
+          <ion-icon name="globe"></ion-icon>
+        </ion-fab-button>
+      </ion-fab-list> -->
+    </ion-fab>
+
+  
+</ion-content>

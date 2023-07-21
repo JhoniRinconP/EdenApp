@@ -1,0 +1,157 @@
+.contApp{
+  margin: 20px;
+}
+
+.transparent-header {
+    // --ion-background-color: transparent;
+    // --ion-toolbar-background: transparent;
+    // --ion-toolbar-opacity: 0;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 1rem), 1rem 100%, 0 100%);
+}
+
+.contCarrito {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 20px 10px 20px;
+    align-items: center;
+}
+
+.titulo{
+    text-align: center;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    font-weight: 600;
+    color: black;
+    // margin: 15px 0px 5px 0px;
+}
+
+.iconCarro{
+    zoom: 2;
+    color: #424242;
+}
+
+.badge-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    position: relative;
+  }
+  
+  .badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    padding: 3px;
+    font-size: 11px;
+    border-radius: 1rem;
+  }
+  
+  .infocard {
+    margin: 15px 0px 7px 15px;
+  }
+
+  .infotitulo{
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: capitalize;
+  }
+  .infocontenido{
+    text-align: justify;
+  }
+
+  .modeloCard{
+    object-fit: cover;
+    height: 100%;
+    padding: 5px;
+    border-radius: 1rem;
+  }
+
+  .contClickpromo{
+    margin-left: 16px;
+    align-items: center;
+    display: flex;
+    color: #242322;
+    font-weight: bolder;
+    gap: 3px;
+    text-transform: capitalize;
+    margin-bottom: 1rem;
+  }
+
+  /*SEGMENTO CON IMAGEN Y SUS RESPECTIVAS VARIANTES*/
+  .custom-segment {
+    // background-color: transparent; /* Quita el color de fondo del segmento */
+    border: none; /* Quita el borde del segmento */
+    border-radius: 10px; /* Agrega un borde redondeado al segmento */
+    margin: 0; /* Quita los márgenes del segmento */
+    padding: 0; /* Quita el padding del segmento */
+  }
+  
+  .btnsegmento {
+    padding: 0; /* Quita el padding de los botones del segmento */
+    margin: 0; /* Quita los márgenes de los botones del segmento */
+    background-color: transparent; /* Quita el color de fondo de los botones */
+    border: none; /* Quita el borde de los botones */
+    margin-right: -15px;
+    color: #424242;
+  }
+  
+  .imgitems {
+    margin-bottom: 3px; /* Ajusta el espacio entre el avatar y el nombre */
+    object-fit: cover;
+  }
+  
+  .tituloitems {
+    text-align: center; /* Centra el nombre del usuario */
+    font-size: 12px; /* Ajusta el tamaño de la fuente del nombre del usuario */
+    font-weight: bold; /* Ajusta el grosor de la fuente del nombre del usuario */
+  }
+  
+  .btnsegmento::after {
+    background: transparent; /* Quita el color del borde de los botones activos */
+  }
+  
+  .btnsegmento.activated::after {
+    background: transparent; /* Quita el color del borde del botón activo */
+  }
+
+  // .btnsegmento ::ng-deep{
+  //   // background-color: #003bfd; // cambia el color del background
+  // }
+
+  ::part(indicator-background) {
+    background-color: #2D303A; // cambia el color de la barrita de abajo
+    border-radius: 1rem;
+  }
+
+  .titulocategorias{
+    margin-left: 24px;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .contClickcompra {
+    float: right;
+    margin: 0px 10px 10px 0px;
+  } 
+
+  
+
+
+
+  
+ 
+  
+
+
+
+
+
+
+  
+  
+  
+  
+

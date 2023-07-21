@@ -1,9 +1,17 @@
+.transparent-header {
+    // --ion-background-color: transparent;
+    // --ion-toolbar-background: transparent;
+    // --ion-toolbar-opacity: 0;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 1rem), 1rem 100%, 0 100%);
+  }
+
 .titulo{
     text-align: center;
     font-size: 1.5rem;
     text-transform: capitalize;
     font-weight: 600;
     color: black;
+    margin: 15px 0px 5px 0px;
 }
 
 .contbuscador {
@@ -11,7 +19,8 @@
     justify-content: center;
     margin-top: 10px;
     gap: 10px;
-    padding: 10px;
+    // padding: 10px;
+    margin: 0px 10px 5px 10px;
 }
 
 .input-field {
@@ -32,18 +41,6 @@
     display: grid;
     place-items: center;
 }
-
-// .input-field2 {
-//     background-color: #f0f0f0;
-//     margin: 10px 0;
-//     height: 55px;
-//     border-radius: 55px;
-//     display: grid;
-//     grid-template-columns: 15% 85%;
-//     padding: 0 0.4rem;
-//     position: relative;
-//     align-items: center;
-// }
 
 .iconsformulario{
     width: 100%;
@@ -72,3 +69,5 @@
     color: #aaa;
     font-weight: 500;
   }
+
+  

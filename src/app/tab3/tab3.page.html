@@ -1,17 +1,111 @@
-<ion-header [translucent]="true">
+<ion-header [translucent]="true" class="transparent-header">
   <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
+    <div class="contCarrito">
+      <ion-title class="titulo">
+      Edem
+      </ion-title>
+      <div class="badge-container">
+        <ion-icon class="iconCarro" name="cart-outline"></ion-icon>
+        <ion-badge slot="end" class="badge">22</ion-badge>
+      </div>
+      
+    </div>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <div class="contApp">
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+    <ion-card>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="8"> 
+            <ion-card-header class="infocard">
+              <ion-card-title class="infotitulo">Anuncio importante</ion-card-title>
+            </ion-card-header>
+          
+            <ion-card-content class="infocontenido">
+              Here's a small text description for the card content. Nothing more, nothing less.
+            </ion-card-content>
+            <div class="contClickpromo">
+              Ver información
+              <ion-icon name="arrow-forward-outline"></ion-icon>
+            </div>
+          </ion-col>
+          <ion-col size="4">
+            <img class="modeloCard" src="https://img.freepik.com/foto-gratis/florero-tulipanes-rosas_23-2148860050.jpg?w=740&t=st=1689954081~exp=1689954681~hmac=d6c68a6bb2de1cfa4521d7e987f8d0acec17aa550e2b999b626236837de8b056" alt="">
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card>
+
+  </div>
+
+    <h3 class="titulocategorias">Categorias</h3>
+    <ion-segment (ionChange)="segmentChanged($event)" scrollable [(ngModel)]="seleccionSegmento" class="custom-segment" >
+      <ng-container *ngFor="let item of opciones; index as i">
+        <ion-segment-button class="btnsegmento" value="{{item.value}}">
+          <ion-avatar>
+            <img class="imgitems" [src]="item.img" alt="Avatar">
+          </ion-avatar>
+          <ion-label class="tituloitems">{{item.label}}</ion-label>
+        </ion-segment-button>
+      </ng-container>
+    </ion-segment>
+
+    <div [ngSwitch]="seleccionSegmento"> 
+      <ng-container *ngFor="let item of opciones">
+        <div *ngSwitchCase="item.value"  class="contApp">
+          
+          <ion-card class="contenedorx">
+            <ion-grid>
+              <ion-row>
+                <ion-col size="4">
+                  <img class="modeloCard" [src]="item.img" alt="">
+                </ion-col>
+                <ion-col size="8"> 
+                  <ion-card-header class="infocard">
+                    <ion-card-title class="infotitulo">{{item.content}}</ion-card-title>
+                  </ion-card-header>
+                
+                  <ion-card-content class="infocontenido">
+                    Here's a small text description for the card content. Nothing more, nothing less.
+                  </ion-card-content>
+                  <div class="contClickcompra">
+                    <ion-button color="dark" shape="round">Comprar</ion-button>
+                  </div>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-card>
+
+
+          <ion-grid style="margin-top: 1rem;">
+            <ion-row style="margin-left: -10px; margin-right: -10px;">
+              <ion-col size="6" style="padding: 10px;" *ngFor="let item of [1,2,3,4,5]">
+                <ion-card>
+                  <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+                  <ion-card-header style="margin: 10px;">
+                    <ion-card-title>Card Title</ion-card-title>
+                    <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+                  </ion-card-header>
+
+                  <ion-card-content>
+                    Here's a small text description for the card content. Nothing more, nothing less.
+                  </ion-card-content>
+                  <ion-button expand="full" color="dark">Comprar</ion-button>
+                </ion-card>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+
+
+          
+          
+          
+
+        </div>
+      </ng-container>
+    </div>
+
 </ion-content>

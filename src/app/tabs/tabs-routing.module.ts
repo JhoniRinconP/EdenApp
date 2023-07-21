@@ -19,6 +19,10 @@ const routes: Routes = [
         path: 'tab3',
         loadChildren: () => import('../tab3/tab3.module').then(m => m.Tab3PageModule)
       },
+      {
+        path: 'profile',
+        loadChildren: () => import('../pages/profile/profile.module').then(m => m.ProfilePageModule)
+      },
       // {
       //   path: '',
       //   redirectTo: '/home',
@@ -30,7 +34,19 @@ const routes: Routes = [
     path: '',
     redirectTo: '/home',
     pathMatch: 'full'
-  }
+  },
+  {
+    path: 'searchs',
+    loadChildren: () => import('../pages/search/search.module').then( m => m.SearchPageModule)
+  },
+  {
+    path: 'deceased',
+    loadChildren: () => import('../pages/deceased/deceased.module').then( m => m.DeceasedPageModule)
+  },
+  {
+    path: 'profile',
+    loadChildren: () => import('../pages/profile/profile.module').then( m => m.ProfilePageModule)
+  },
 ];
 
 @NgModule({

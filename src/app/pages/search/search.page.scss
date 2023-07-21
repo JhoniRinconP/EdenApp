@@ -3,7 +3,16 @@
     justify-content: center;
     margin-top: 10px;
     gap: 10px;
-    padding: 10px;
+    margin: 0px 10px 10px 10px;
+}
+
+.titulo{
+    text-align: center;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    font-weight: 600;
+    color: black;
+    margin: 15px 0px 5px 0px;
 }
 
 .input-field {
@@ -52,9 +61,9 @@
     font-weight: 500;
 }
 
+ /*CARD 1 LISTA USER*/
 .contcard{
-    // padding: 20px;
-    margin: 10px 20px 20px 20px;
+    margin: 10px 20px 0px 20px;
     display: flex;
     justify-content: center;
     gap: 22px
@@ -64,7 +73,7 @@
     margin: 0px 5px 15px 5px;
 }
 
-.titulo{
+.nombre{
     margin: 10px;
     font-weight: 600;
 }
@@ -78,6 +87,49 @@
     object-fit: cover;
     height: 100%;
 }
+
+/*CARD2 RECUADROS*/
+.espaciocard{
+    margin: 10px 10px 7px 10px;
+}
+
+.contcard2{
+    margin: 15px;
+}
+
+.card-background-page {
+    display: flex;
+    object-fit: cover;
+   
+    img{
+        height: 100%;
+    }
+
+    ion-card {
+      position: relative;
+      text-align: center;
+    }
+  
+    .card-title {
+      position: absolute;
+      top: 55%;
+      font-size: 2.0em;
+      width: 100%;
+      font-weight: bold;
+      color: #fff;
+    }
+  
+    .card-subtitle {
+      font-size: 1.0em;
+      position: absolute;
+      top: 80%;
+      width: 100%;
+      color: #fff;
+    }
+  
+}
+
+  /*HEAR O TOLBAR TRANSPARENTE Y LINEA*/
 .transparent-header {
     // --ion-background-color: transparent;
     // --ion-toolbar-background: transparent;
@@ -86,3 +138,15 @@
   }
 
   
+  ion-icon[name='people-outline'],
+  ion-icon[name='menu-outline'] {
+    color: #006dffb8; /* Color normal de los iconos */
+  }
+  
+  ion-icon[name='people'],
+  ion-icon[name='menu'] {
+    // color: #aaaaba;  Color del icono seleccionado 
+    color: #424242;
+  }
+
+ 

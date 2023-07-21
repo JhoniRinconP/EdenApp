@@ -1,0 +1,127 @@
+.profile-container {
+    position: relative;
+    // width: 200px; /* Ajusta el ancho según tus necesidades */
+    height: 300px; /* Ajusta la altura según tus necesidades */
+    overflow: hidden; /* Para ocultar la parte de la silueta curva que salga del contenedor */
+  }
+  
+  .silhouette {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://img.freepik.com/vector-gratis/plantilla-diseno-patron-colores-w_23-2149844823.jpg?w=826&t=st=1689869049~exp=1689869649~hmac=0a98f65b4a1f2d12884dc5832e18892347e779c0d19031fdf15ebb5fb7e1708d');
+    // background: linear-gradient(to right, #3a86ff, #72c4ff); /* Degradado azul */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    // clip-path: ellipse(100% 80% at 50% 0%); /* Crea la forma de silueta curva */
+    //  clip-path: path('M 0 0 C 50 50, 100 0, 150 50 C 200 100, 300 0, 400 100 C 450 150, 500 0, 600 100 C 650 150, 700 50, 800 100 C 850 150, 900 0, 950 50 L 950 300 L 0 300 Z');
+    // clip-path: path('M 0 0 C 50 100, 100 50, 150 100 C 200 150, 300 100, 400 200 C 450 250, 500 150, 600 200 C 650 250, 700 150, 800 200 C 850 250, 900 100, 950 150 L 950 300 L 0 300 Z');
+    // clip-path: path('M 0 0 C 50 50, 100 0, 150 100 C 200 200, 300 50, 400 100 C 450 150, 500 0, 600 100 C 650 150, 750 0, 800 100 C 850 200, 900 50, 950 100 L 950 300 L 0 300 Z');
+    // clip-path: path('M 0 0 C 50 150, 150 50, 200 100 C 250 150, 350 50, 400 100 C 450 150, 550 50, 600 100 C 650 150, 750 50, 800 100 L 800 300 L 0 300 Z'); /* Figura dinámica con subidas y bajadas hacia abajo */
+    clip-path: path("M 0 0 C 60 90, 120 30, 180 90 C 240 150, 300 60, 360 90 C 420 120, 480 30, 540 90 C 600 150, 660 60, 720 90 C 826 120, 840 30, 5000 90 L 1000 300 L 0 372 Z");
+    // clip-path: path("M 0 0 C 60 90, 120 30, 184 90 C 160 65, 256 183, 381 70 C 475 -11, 531 6, 539 90 C 600 153, 660 60, 720 90 C 780 120, 840 30, 900 90 L 900 300 L 0 300 Z");
+    transform: rotate(180deg);
+    z-index: 1; /* Para que la silueta aparezca por encima del avatar */
+  }
+  
+  .avatar {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px; /* Ajusta el ancho del avatar según tus necesidades */
+    height: 120px; /* Ajusta la altura del avatar según tus necesidades */
+    border-radius: 50%; /* Hace que el avatar tenga forma circular */
+    border: 3px solid white; /* Puedes añadir un borde al avatar si lo deseas */
+    z-index: 2; /* Para que el avatar aparezca por encima de la silueta */
+    object-fit: cover;
+    background-repeat: no-repeat;
+    border: 3px solid #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+  }
+
+  .contInfpersonal{
+    padding: 20px;
+    margin: -60px 0px 0px 0px;
+  }
+  
+  .nombre{
+    margin: 0px;
+    font-weight: 600;
+    color: #424242;
+  }
+
+  .fecha{
+    margin-top: 5px;
+    font-weight: normal;
+    font-size: 14px;
+  }
+
+  .custom-file-input {
+    position: absolute;
+    top: 179px;
+    left: 50%;
+    // width: 100%;
+    // height: 100%;
+    
+    transform: translate(-50%, -50%);
+    width: 120px; /* Ajusta el ancho del avatar según tus necesidades */
+    height: 120px; /* Ajusta la altura del avatar según tus necesidades */
+    border-radius: 50%; /* Hace que el avatar tenga forma circular */
+    border: 3px solid white; /* Puedes añadir un borde al avatar si lo deseas */
+    z-index: 2; /* Para que el avatar aparezca por encima de la silueta */
+    object-fit: cover;
+    background-repeat: no-repeat;
+    border: 3px solid #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+  }
+  
+  .custom-file-input input[type="file"] {
+    position: absolute;
+    top: 58px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 1;
+    border-radius: 50%
+  }
+  
+  .camera-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 60px; /* Ajusta el tamaño del ícono de la cámara según tus necesidades */
+    color: #999;
+    z-index: 0;
+  }
+
+  .editandoimg{
+    filter: grayscale(100%);
+  }
+
+  .contformulalrio {
+    margin-top: 2rem;
+  }
+
+  .inptsformulario{
+    margin-bottom: 1rem;
+  }
+
+  .iconoformulario {
+    margin-right: 10px;
+    color: #424242;
+  }
+
+  
+
+
+  
+
+
+
+  
