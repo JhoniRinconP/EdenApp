@@ -2,11 +2,9 @@
   margin: 20px;
 }
 
-.transparent-header {
-    // --ion-background-color: transparent;
-    // --ion-toolbar-background: transparent;
-    // --ion-toolbar-opacity: 0;
-    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 1rem), 1rem 100%, 0 100%);
+.bar-header {
+  // box-shadow: 20px -13px 0px -1px rgb(0 0 0 / 0%), 0 4px 5px 0 rgb(0 0 0 / 0%), 0 1px 10px 0 rgb(0 0 0 / 0%);
+  box-shadow: none;
 }
 
 .contCarrito {
@@ -23,6 +21,7 @@
     font-weight: 600;
     color: black;
     // margin: 15px 0px 5px 0px;
+    margin-left: 80px;
 }
 
 .iconCarro{
@@ -35,6 +34,7 @@
     align-items: flex-start;
     justify-content: flex-end;
     position: relative;
+    margin-right: 5px;
   }
   
   .badge {
@@ -136,6 +136,8 @@
     float: right;
     margin: 0px 10px 10px 0px;
   } 
+
+
 
   
 

@@ -1,9 +1,6 @@
-.transparent-header {
-    // --ion-background-color: transparent;
-    // --ion-toolbar-background: transparent;
-    // --ion-toolbar-opacity: 0;
-    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 1rem), 1rem 100%, 0 100%);
-  }
+.bar-header {
+    box-shadow: none;
+}
 
 .titulo{
     text-align: center;

@@ -1,21 +1,20 @@
-<ion-header [translucent]="true" class="transparent-header">
+<ion-header [translucent]="true" class="bar-header">
   <ion-toolbar>
     <div class="contCarrito">
       <ion-title class="titulo">
       Edem
       </ion-title>
       <div class="badge-container">
-        <ion-icon class="iconCarro" name="cart-outline"></ion-icon>
         <ion-badge slot="end" class="badge">22</ion-badge>
+        <ion-icon class="iconCarro" name="cart-outline"></ion-icon>
       </div>
-      
+      <ion-icon class="iconCarro" name="person-circle-outline" [routerLink]="['/profile']"></ion-icon>
     </div>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <div class="contApp">
-
     <ion-card>
       <ion-grid>
         <ion-row>
@@ -33,7 +32,7 @@
             </div>
           </ion-col>
           <ion-col size="4">
-            <img class="modeloCard" src="https://img.freepik.com/foto-gratis/florero-tulipanes-rosas_23-2148860050.jpg?w=740&t=st=1689954081~exp=1689954681~hmac=d6c68a6bb2de1cfa4521d7e987f8d0acec17aa550e2b999b626236837de8b056" alt="">
+            <img class="modeloCard" src="https://cdn.pixabay.com/photo/2016/02/05/00/55/nature-dead-1180189_640.jpg" alt="">
           </ion-col>
         </ion-row>
       </ion-grid>
@@ -57,7 +56,7 @@
       <ng-container *ngFor="let item of opciones">
         <div *ngSwitchCase="item.value"  class="contApp">
           
-          <ion-card class="contenedorx">
+          <ion-card>
             <ion-grid>
               <ion-row>
                 <ion-col size="4">
@@ -72,7 +71,7 @@
                     Here's a small text description for the card content. Nothing more, nothing less.
                   </ion-card-content>
                   <div class="contClickcompra">
-                    <ion-button color="dark" shape="round">Comprar</ion-button>
+                    <ion-button [routerLink]="['/shoppings']" color="dark" shape="round">Comprar</ion-button>
                   </div>
                 </ion-col>
               </ion-row>
@@ -84,7 +83,7 @@
             <ion-row style="margin-left: -10px; margin-right: -10px;">
               <ion-col size="6" style="padding: 10px;" *ngFor="let item of [1,2,3,4,5]">
                 <ion-card>
-                  <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+                  <img src="https://ionicframework.com/docs/img/demos/card-media.png" />
                   <ion-card-header style="margin: 10px;">
                     <ion-card-title>Card Title</ion-card-title>
                     <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
@@ -93,16 +92,13 @@
                   <ion-card-content>
                     Here's a small text description for the card content. Nothing more, nothing less.
                   </ion-card-content>
-                  <ion-button expand="full" color="dark">Comprar</ion-button>
+                  <ion-button [routerLink]="['/shoppings']" expand="full" color="dark">Comprar</ion-button>
                 </ion-card>
               </ion-col>
             </ion-row>
           </ion-grid>
 
 
-          
-          
-          
 
         </div>
       </ng-container>

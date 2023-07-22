@@ -1,0 +1,128 @@
+.iconRegresar {
+  position: absolute;
+  color: white;
+  padding: 5px;
+  zoom: 2;
+}
+  
+  .contportada {
+    width: 100%;
+    object-fit: cover;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+
+    .imgportada{
+        width: 100%;
+        border-radius: 0px 0px 40px 40px;
+    }
+  }
+
+  .formadiseno{
+    background: #ffffff;
+    border-radius: 30px 30px 0px 0px;
+    margin-top: -84px;
+    z-index: 1;
+    position: relative;
+  }
+
+  .contApp{
+    margin: 20px;
+  }
+
+
+  .contdescripcion{
+    margin-top: 2rem;
+  }
+
+    .product-title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .product-description {
+      margin-top: 10px;
+      font-size: 16px;
+    }
+
+    .product-price {
+      font-size: 18px;
+      font-weight: bold;
+      color: #007bff;
+      margin-top: 10px;
+      display: flex;
+    }
+
+    .product-features {
+      margin-top: 20px;
+    }
+
+    .feature {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .feature-icon {
+      margin-right: 10px;
+      font-size: 20px;
+      color: #007bff;
+    }
+
+    .contbtncompra{
+      margin-top: 2rem;
+    }
+
+    .saldo-container {
+      justify-content: end;
+      display: flex;
+      gap: 10px;
+    }
+    
+    .saldo-box {
+      background-color: #ffffff;
+      box-shadow: 4px 4px 20px 1px rgba(0, 0, 0, 0.1);
+      border-radius: 1.5rem;
+      display: flex;
+      align-items: center;
+      padding: 10px;
+    }
+    
+    .saldo-icon {
+      font-size: 20px;
+      margin-right: 7px;
+    }
+    
+    .saldo-amount {
+      font-size: 15px;
+    }
+    
+    .saldo-label {
+      font-size: 14px;
+      color: #666666;
+    }
+
+    .titulocategorias{
+      margin-left: 6px;
+      font-size: 15px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-top: 3rem;
+      margin-bottom: 0px;
+    }
+
+    .concard {
+      height: 300px;
+      overflow-x: scroll; /* Agrega el scroll en posición X para dispositivos móviles */
+      -webkit-overflow-scrolling: touch; /* Mejora el desplazamiento en dispositivos móviles */
+    }
+    
+    .scroll-row {
+      display: flex;
+      flex-wrap: nowrap; /* Evita que los elementos se envuelvan a la siguiente línea */
+    }
+    
+
+    
+    

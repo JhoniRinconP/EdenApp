@@ -19,10 +19,6 @@ const routes: Routes = [
         path: 'tab3',
         loadChildren: () => import('../tab3/tab3.module').then(m => m.Tab3PageModule)
       },
-      {
-        path: 'profile',
-        loadChildren: () => import('../pages/profile/profile.module').then(m => m.ProfilePageModule)
-      },
       // {
       //   path: '',
       //   redirectTo: '/home',
@@ -46,6 +42,10 @@ const routes: Routes = [
   {
     path: 'profile',
     loadChildren: () => import('../pages/profile/profile.module').then( m => m.ProfilePageModule)
+  },
+  {
+    path: 'shoppings',
+    loadChildren: () => import('../pages/shoppings/shoppings.module').then( m => m.ShoppingsPageModule)
   },
 ];
 

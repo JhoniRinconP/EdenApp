@@ -1,0 +1,85 @@
+<ion-content [fullscreen]="true">
+  <ion-icon [routerLink]="['/tabs/tab3']" class="iconRegresar" name="chevron-back-outline"></ion-icon>
+  <div class="contportada">
+    <img class="imgportada" src="https://cdn.pixabay.com/photo/2016/02/05/00/55/nature-dead-1180189_640.jpg" alt="">
+  </div>
+
+  <div class="contApp">
+
+    <div class="saldo-container">
+      <div class="saldo-box">
+        <ion-icon name="wallet-outline" class="saldo-icon"></ion-icon>
+        <p class="saldo-amount">$500.000</p>
+      </div>
+      <div class="saldo-box">
+        <ion-icon name="cash-outline" class="saldo-icon"></ion-icon>
+        <p class="saldo-amount">$250.000</p>
+      </div>
+
+      <div class="saldo-box">
+        <ion-icon style="zoom: 1.5;" name="add-circle-outline"></ion-icon>
+      </div>
+
+    </div>
+    
+      <div class="contApp">
+        <div class="contdescripcion">
+          <div>
+            <h2 class="product-title">Florero Necromi</h2>
+          </div>
+          <div class="product-content">
+            <p class="product-description">
+              This is a high-quality product with amazing features that will meet all your needs.
+            </p>
+            <div class="product-price">
+              <ion-icon name="cash-outline" class="saldo-icon"></ion-icon>
+              $50.000</div>
+            <div class="product-features">
+              <div class="feature">
+                <ion-icon name="checkmark-outline" class="feature-icon"></ion-icon>
+                Feature 1: Lorem ipsum dolor sit amet.
+              </div>
+              <div class="feature">
+                <ion-icon name="checkmark-outline" class="feature-icon"></ion-icon>
+                Feature 2: Consectetur adipiscing elit.
+              </div>
+              <div class="feature">
+                <ion-icon name="checkmark-outline" class="feature-icon"></ion-icon>
+                Feature 3: Sed do eiusmod tempor incididunt.
+              </div>
+              <!-- Add more features as needed -->
+            </div>
+          </div>
+          <ion-button class="contbtncompra" slot="icon-only" size="default" expand="block" color="dark">Comprar</ion-button>
+        </div>
+      </div>
+      
+      
+      <h3 class="titulocategorias">Te puede interesar</h3>
+      <div class="concard">
+        <ion-grid>
+          <ion-row class="scroll-row" style="margin-left: -10px; margin-right: -10px;">
+            <ion-col size="6" style="padding: 10px;" *ngFor="let item of [1,2,3]">
+              <ion-card>
+                <img src="https://ionicframework.com/docs/img/demos/card-media.png" />
+                <ion-card-header style="margin: 10px;">
+                  <ion-card-title>Card Title</ion-card-title>
+                  <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+                </ion-card-header>
+    
+                <ion-card-content>
+                  Here's a small text description for the card content.
+                </ion-card-content>
+                <ion-button [routerLink]="['/shoppings']" expand="full" color="dark">Comprar</ion-button>
+              </ion-card>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+
+    
+
+    
+
+  </div>
+</ion-content>
