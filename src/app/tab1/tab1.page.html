@@ -4,14 +4,14 @@
      Edem
     </ion-title>
     <div class="contbuscador">
-      <div class="input-field"  [routerLink]="['/searchs']">
+      <div class="input-field" [routerLink]="['/searchs']">
         <ion-icon name="search-outline" class="iconsformulario"></ion-icon>
         <input type="text" placeholder="Contraseña" />
       </div>
   
       <section class="parent">
         <div>
-          <ion-icon style="zoom: 2;" name="information-circle-outline"></ion-icon>
+          <ion-icon [routerLink]="['/questions']" style="zoom: 2;" name="information-circle-outline"></ion-icon>
         </div>
       </section>
     </div>
@@ -20,8 +20,64 @@
 
 <ion-content [fullscreen]="true">
  
- 
+  <div class="slider">
+    <div #slidesContainer class="slides-container">
+      <div class="slide" *ngFor="let item of prueba">
+        <img class="imgslider" [src]="item.img" alt="">
+        <!-- <h1>Slide {{item.numero}}</h1>
+        <p>{{item.contenido}}</p> -->
+      </div>
+    </div>
+    <div class="contbtns">
+      <ion-icon class="prev-button" (click)="prevSlide()" name="chevron-back-outline"></ion-icon>
+      <ion-icon class="next-button" (click)="nextSlide()" name="chevron-forward-outline"></ion-icon>
+    </div>
+  </div>
 
+  <h3 class="titulocategorias">Te puede interesar 1</h3>
+  <div class="concard contApp">
+    <ion-grid>
+      <ion-row class="scroll-row" style="margin-left: -10px; margin-right: -10px;">
+        <ion-col size="6" style="padding: 10px;" *ngFor="let item of [1,2,3]">
+          <ion-card>
+            <img src="https://ionicframework.com/docs/img/demos/card-media.png" />
+            <ion-card-header style="margin: 10px;">
+              <ion-card-title>Card Title</ion-card-title>
+              <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+            </ion-card-header>
 
-  <!-- <app-explore-container name="Tab 1 page"></app-explore-container> -->
+            <ion-card-content>
+              Here's a small text description for the card content.
+            </ion-card-content>
+            <ion-button [routerLink]="['/shoppings']" expand="full" color="dark">Comprar</ion-button>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <h3 class="titulocategorias">Te puede interesar 2</h3>
+  <div class="concard contApp">
+    <ion-grid>
+      <ion-row class="scroll-row" style="margin-left: -10px; margin-right: -10px;">
+        <ion-col size="6" style="padding: 10px;" *ngFor="let item of [1,2,3]">
+          <ion-card>
+            <img src="https://ionicframework.com/docs/img/demos/card-media.png" />
+            <ion-card-header style="margin: 10px;">
+              <ion-card-title>Card Title</ion-card-title>
+              <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+            </ion-card-header>
+
+            <ion-card-content>
+              Here's a small text description for the card content.
+            </ion-card-content>
+            <ion-button [routerLink]="['/shoppings']" expand="full" color="dark">Comprar</ion-button>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  
+  
+
 </ion-content>

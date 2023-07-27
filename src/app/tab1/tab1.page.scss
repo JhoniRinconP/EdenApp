@@ -67,4 +67,78 @@
     font-weight: 500;
   }
 
+
+/*SLIDER*/
+  .imgslider {
+    border-radius: 1rem;
+    box-shadow: -1px 3px 5px 0px rgba(0, 0, 0, 0.1);
+    height: 200px;
+    width: 100%;
+  }
+
+  .slider {
+    width: 100%;
+    // max-width: 600px;
+    // margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .slides-container {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .slide {
+    flex: 0 0 100%;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .prev-button,
+  .next-button {
+    position: absolute;
+    top: 40%;
+    transform: translateY(-50%);
+    padding: 8px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 1rem;
+    margin: 26px;
+  }
+  
+  .prev-button {
+    left: 0;
+  }
+  
+  .next-button {
+    right: 0;
+  }
+
+  /*SLIDER CATEGORIAS*/
+  .concard {
+    height: 300px;
+    overflow-x: scroll; 
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .scroll-row {
+    display: flex;
+    flex-wrap: nowrap; 
+  }
+
+  .contApp{
+    // margin: 20px;
+    margin: 10px 20px 20px 20px;
+  }
+
+  .titulocategorias{
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin: 0px 0px 0px 20px;
+  }
+  
+
   

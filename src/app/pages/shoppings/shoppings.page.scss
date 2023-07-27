@@ -114,13 +114,13 @@
 
     .concard {
       height: 300px;
-      overflow-x: scroll; /* Agrega el scroll en posición X para dispositivos móviles */
-      -webkit-overflow-scrolling: touch; /* Mejora el desplazamiento en dispositivos móviles */
+      overflow-x: scroll; 
+      -webkit-overflow-scrolling: touch;
     }
     
     .scroll-row {
       display: flex;
-      flex-wrap: nowrap; /* Evita que los elementos se envuelvan a la siguiente línea */
+      flex-wrap: nowrap; 
     }
     
 

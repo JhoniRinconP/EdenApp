@@ -1,33 +1,327 @@
-.center-col {
+.iconRegresar {
+  position: absolute;
+  color: #dda64b;
+  padding: 5px;
+  zoom: 2;
+  z-index: 3;
+}
+
+.profile-container {
+    position: relative;
+    // width: 200px; /* Ajusta el ancho según tus necesidades */
+    height: 200px; /* Ajusta la altura según tus necesidades */
+    overflow: hidden; /* Para ocultar la parte de la silueta curva que salga del contenedor */
+  }
+  
+  .silhouette {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://img.freepik.com/vector-gratis/plantilla-diseno-patron-colores-w_23-2149844823.jpg?w=826&t=st=1689869049~exp=1689869649~hmac=0a98f65b4a1f2d12884dc5832e18892347e779c0d19031fdf15ebb5fb7e1708d');
+    // background: linear-gradient(to right, #3a86ff, #72c4ff); /* Degradado azul */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    clip-path: ellipse(100% 80% at 50% 0%); /* Crea la forma de silueta curva */
+    z-index: 1; /* Para que la silueta aparezca por encima del avatar */
+  }
+  
+  
+  .avatar {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px; /* Ajusta el ancho del avatar según tus necesidades */
+    height: 120px; /* Ajusta la altura del avatar según tus necesidades */
+    border-radius: 50%; /* Hace que el avatar tenga forma circular */
+    border: 3px solid white; /* Puedes añadir un borde al avatar si lo deseas */
+    z-index: 2; /* Para que el avatar aparezca por encima de la silueta */
+    object-fit: cover;
+    background-repeat: no-repeat;
+    border: 3px solid #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+  }
+
+  .icon-container{
+   text-align: center;
+//    padding: 40px
+  }
+
+  .scroll-container {
+    // margin: 20px;
+    overflow-x: scroll; 
+    -webkit-overflow-scrolling: touch; 
+  }
+
+  .scroll-row {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+
+  .contApp{
+    margin: 20px;
+  }
+
+  .titledescri{
+    font-weight: bold;
+    margin-top: 2rem;
+  }
+
+  .description{
+    margin-top: 1rem;
+    text-align: justify;
+  }
+
+  .product-features {
+    margin-top: 20px;
+  }
+
+  .feature {
     display: flex;
     align-items: center;
-    justify-content: center;
-}
+    margin-bottom: 10px;
+  }
+
+  .feature-icon {
+    margin-right: 10px;
+    font-size: 20px;
+    color: #007bff;
+  }
+
+
+
+//   @keyframes bounce {
+//     0%, 20%, 50%, 80%, 100% {
+//       transform: translateY(0); /* Posición inicial y final */
+//     }
+//     40% {
+//       transform: translateY(-30px); /* Altura máxima del rebote */
+//     }
+//     60% {
+//       transform: translateY(-15px); /* Altura del rebote intermedio */
+//     }
+//   }
   
-.center-col img {
-    max-width: 100%;
-    max-height: 100%;
+//   .bouncing-icon {
+//     animation: bounce 1s infinite; /* 1 segundo de duración de la animación, infinito bucles */
+//   }
+
+.textUsuario{
+    text-align: center;
+    font-weight: bold;
+    margin: -10px 0px 20px 0px;
+    font-size: 18px;
 }
 
-.contpersona{
-    // text-align: center;
-    padding: 20px;
-}
+/*SEGMENTO CON IMAGEN Y SUS RESPECTIVAS VARIANTES*/
+  .custom-segment {
+    // background-color: transparent; /* Quita el color de fondo del segmento */
+    border: none; /* Quita el borde del segmento */
+    border-radius: 10px; /* Agrega un borde redondeado al segmento */
+    margin: 0; /* Quita los márgenes del segmento */
+    padding: 0; /* Quita el padding del segmento */
+  }
+  
+  .btnsegmento {
+    padding: 0; /* Quita el padding de los botones del segmento */
+    margin: 0; /* Quita los márgenes de los botones del segmento */
+    background-color: transparent; /* Quita el color de fondo de los botones */
+    border: none; /* Quita el borde de los botones */
+    margin-right: -6px;
+    color: #424242;
+  }
+  
+  .imgitems {
+    margin-bottom: 3px; /* Ajusta el espacio entre el avatar y el nombre */
+    object-fit: cover;
+  }
+  
+  .tituloitems {
+    text-align: center; /* Centra el nombre del usuario */
+    font-size: 12px; /* Ajusta el tamaño de la fuente del nombre del usuario */
+    font-weight: bold; /* Ajusta el grosor de la fuente del nombre del usuario */
+  }
+  
+  .btnsegmento::after {
+    background: transparent; /* Quita el color del borde de los botones activos */
+  }
+  
+  .btnsegmento.activated::after {
+    background: transparent; /* Quita el color del borde del botón activo */
+  }
 
-.imgpersona{
+  // .btnsegmento ::ng-deep{
+  //   // background-color: #003bfd; // cambia el color del background
+  // }
+
+  ::part(indicator-background) {
+    background-color: #2D303A; // cambia el color de la barrita de abajo
     border-radius: 1rem;
-    box-shadow: 1px 3px 20px -1px #0003, 0 1px 1px #00000024, 0 1px 3px #0000001f;
-}
+  }
 
-.items{
-    justify-content: center;
-    height: 30%;
-    display: flex;
-    align-items: end;
-    border-bottom: 2px solid #000;
-}
 
-.biografia{
-    text-align: justify;
-}
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .menu-toggler {
+//     position: absolute;
+//     display: block;
+//     top:0;
+//     bottom:0;
+//     right:0;
+//     left:0;
+//     margin:auto;
+//     width:40px;
+//     height:40px;
+//     z-index:2;
+//     opacity:0;
+//     cursor:pointer;
+//   }
+//   .menu-toggler:hover + label,
+//   .menu-toggler:hover + label:before,
+//   .menu-toggler:hover + label:after{
+//     background: white;
+//   }
+//   .menu-toggler:checked + label {
+//     background: transparent;
+//   }
+//   .menu-toggler:checked + label:before,
+//   .menu-toggler:checked + label:after{
+//     top:0;
+//     width:40px;
+//     transform-origin: 50% 50%;
+//   }
+//   .menu-toggler:checked + label:before {
+//     transform: rotate(45deg) translateY(-15px) translateX(-15px);
+//   }
+//   .menu-toggler:checked + label:after {
+//     transform: rotate(-45deg);
+//   }
+//   .menu-toggler:checked ~ ul .menu-item { 
+//     opacity: 1;
+//   }
+//   .menu-toggler:checked ~ ul .menu-item:nth-child(1) {
+//     transform: rotate(0deg) translate(-110px);
+//   }
+//   .menu-toggler:checked ~ ul .menu-item:nth-child(2) {
+//     transform: rotate(60deg) translateX(-110px);
+//   }
+//   .menu-toggler:checked ~ ul .menu-item:nth-child(3) {
+//     transform: rotate(120deg) translateX(-110px);
+//   }
+//   .menu-toggler:checked ~ ul .menu-item:nth-child(4) {
+//     transform: rotate(180deg) translateX(-110px);
+//   }
+//   .menu-toggler:checked ~ ul .menu-item:nth-child(5) {
+//     transform: rotate(240deg) translateX(-110px);
+//   }
+//   .menu-toggler:checked ~ ul .menu-item:nth-child(6) {
+//     transform: rotate(300deg) translateX(-110px);
+//   }
+//   .menu-toggler:checked ~ ul .menu-item a {
+//     pointer-events:auto;
+//   }
+//   .menu-toggler + label {
+//     width: 40px;
+//     height: 5px;
+//     display: block;
+//     z-index: 1;
+//     border-radius: 2.5px;
+//     background: rgba(230, 239, 250, 0.9);
+//     transition: transform 0.5s top 0.5s;
+//     position: absolute;
+//     display: block;
+//     top: 0;
+//     bottom: 0;
+//     left: 0;
+//     right: 0;
+//     margin: auto;
+//   }
+//   .menu-toggler + label:before,
+//   .menu-toggler + label:after {
+//     width: 40px;
+//     height: 5px;
+//     display: block;
+//     z-index: 1;
+//     border-radius: 2.5px;
+//     background: rgba(0, 0, 0, 0.7);
+//     transition: transform 0.5s top 0.5s;
+//     content: "";
+//     position: absolute;
+//     display: block;
+//     left: 0;
+//   }
+//   .menu-toggler + label:before {
+//     top: 10px;
+//   }
+//   .menu-toggler + label:after {
+//     top: -10px;
+//   }
+//   .menu-item:nth-child(1) a {
+//     transform: rotate(0deg);
+//   }
+//   .menu-item:nth-child(2) a {
+//     transform: rotate(-60deg);
+//   }
+//   .menu-item:nth-child(3) a {
+//     transform: rotate(-120deg);
+//   }
+//   .menu-item:nth-child(4) a {
+//     transform: rotate(-180deg);
+//   }
+//   .menu-item:nth-child(5) a {
+//     transform: rotate(-240deg);
+//   }
+//   .menu-item:nth-child(6) a {
+//     transform: rotate(-300deg);
+//   }
+//   .menu-item {
+//     position: absolute;
+//     display: block;
+//     top: 0;
+//     bottom: 0;
+//     left: 0;
+//     right: 0;
+//     margin: auto;
+//     width: 80px;
+//     height: 80px;
+//     opacity: 0;
+//     transition: 0.5s;
+//   }
+//   .menu-item a {    
+//     display: block;
+//     width: inherit;
+//     height: inherit;
+//     line-height: 80px;
+//     color: rgba(255, 255, 255, 0.7);
+//     background: rgba(0, 0, 0, 0.7);
+//     border-radius: 50%;
+//     text-align: center;
+//     text-decoration: none;
+//     font-size: 40px;
+//     pointer-events: none;
+//     transition: 0.2s;
+//   }
+//   .menu-item a:hover {
+//     box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
+//     color: white;
+//     background: rgba(244, 33, 33, 0.3);
+//     font-size: 44.44px
+//   }

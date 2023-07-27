@@ -5,51 +5,95 @@
 </ion-header> -->
 
 <ion-content [fullscreen]="true">
-
-  
-  <div class="contpersona">
-    <ion-grid>
-      <ion-row>
-        <!-- Columna 1 con iconos grandes -->
-        <ion-col size="2">
-          <ion-row class="items">
-            <ion-icon name="bicycle-outline" style="font-size: 2rem;"></ion-icon>
-          </ion-row>
-          <ion-row class="items">
-            <ion-icon name="bug-outline" style="font-size: 2rem;"></ion-icon>
-          </ion-row>
-          <ion-row class="items">
-            <ion-icon name="bonfire-outline" style="font-size: 2rem;"></ion-icon>
-          </ion-row>
-        </ion-col>
-        <ion-col size="8" style="padding: 10px;">
-          <img class="imgpersona" src="https://cdn.pixabay.com/photo/2023/06/19/16/02/beautiful-woman-8074997_1280.jpg" alt="">
-        </ion-col>
-        <!-- Columna 2 con iconos grandes -->
-        <ion-col size="2">
-          <ion-row class="items">
-            <ion-icon name="glasses-outline" style="font-size: 2rem;"></ion-icon>
-          </ion-row>
-          <ion-row class="items">
-            <ion-icon name="finger-print-outline" style="font-size: 2rem;"></ion-icon>
-          </ion-row>
-          <ion-row class="items">
-            <ion-icon name="footsteps-outline" style="font-size: 2rem;"></ion-icon>
-          </ion-row>
-        </ion-col>
-      </ion-row>
-    </ion-grid>
+  <ion-icon [routerLink]="['/tabs/tab2']" class="iconRegresar" name="chevron-back-outline"></ion-icon>
+  <div class="profile-container">
+    <div class="silhouette"></div>
+    <img src="https://cdn.pixabay.com/photo/2023/06/19/16/02/beautiful-woman-8074997_1280.jpg" alt="Avatar" class="avatar">
   </div>
-  
-  <div class="conttexto">
-    
-    <p class="contpersona biografia ">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, aperiam. Nemo, incidunt reiciendis quia dolores quas ipsum itaque molestias dolorem autem id, earum dignissimos cum. Architecto voluptate fugit suscipit est.
+
+  <h3 class="textUsuario">Lorema Mendoza</h3>
+
+  <ion-segment (ionChange)="segmentChanged($event)" scrollable [(ngModel)]="seleccionSegmento" class="custom-segment" >
+    <ng-container *ngFor="let item of opciones; index as i">
+      <ion-segment-button class="btnsegmento" value="{{item.value}}">
+        <ion-avatar>
+          <img class="imgitems" [src]="item.img" alt="Avatar">
+        </ion-avatar>
+        <ion-label class="tituloitems">{{item.label}}</ion-label>
+      </ion-segment-button>
+    </ng-container>
+  </ion-segment>
+
+  <div [ngSwitch]="seleccionSegmento"> 
+    <ng-container *ngFor="let item of opciones">
+      <div *ngSwitchCase="item.value"  class="contApp">
+        {{item.content}}
+      </div>
+    </ng-container>
+  </div>
+
+  <div class="contApp">
+    <h1 class="titledescri">Descripción del producto</h1>
+    <p class="description">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+      Nulla auctor, sem nec faucibus faucibus, mi nunc rutrum sapien, 
+      sit amet rutrum velit elit ac turpis. Fusce vitae euismod mi. 
+      Integer tincidunt, elit nec tempus ultrices, mi mauris iaculis libero, 
+      at hendrerit sem nibh id tellus.
     </p>
+
+    <h2 class="subtitle titledescri">Características:</h2>
+    <div class="product-features">
+      <div class="feature">
+        <ion-icon name="checkmark-outline" class="feature-icon"></ion-icon>
+        Feature 1: Lorem ipsum dolor sit amet.
+      </div>
+      <div class="feature">
+        <ion-icon name="checkmark-outline" class="feature-icon"></ion-icon>
+        Feature 2: Consectetur adipiscing elit.
+      </div>
+      <div class="feature">
+        <ion-icon name="checkmark-outline" class="feature-icon"></ion-icon>
+        Feature 3: Sed do eiusmod tempor incididunt.
+      </div>
+      <!-- Add more features as needed -->
+    </div>
   </div>
+
+
+
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button [routerLink]="['/tabs/tab3']">
+      <ion-icon name="cart-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  
   
 
-  
-  
-  
+
+  <!-- <div class="menu">
+    <input checked="checked" class="menu-toggler" type="checkbox">
+    <label for="menu-toggler"></label>
+    <ul>
+      <li class="menu-item">
+        <a class="fas fa-cat" href=""></a>
+      </li>
+      <li class="menu-item">
+        <a class="fas fa-cookie-bite" href="#"></a>
+      </li>
+      <li class="menu-item">
+        <a class="fab fa-earlybirds" href="#"></a>
+      </li>
+      <li class="menu-item">
+        <a class="fab fa-fly"href="#"></a>
+      </li>
+      <li class="menu-item">
+        <a class ="far fa-gem" href="#"></a>
+      </li>
+      <li class="menu-item">
+        <a class="fas fa-glass-cheers" href="#"></a>
+      </li>
+    </ul>
+  </div> -->
+
 </ion-content>
